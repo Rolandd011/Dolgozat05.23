@@ -52,7 +52,7 @@ app.delete('/recipes/:id', (req, res)=>{
         if(deletedRecipes.changes !== 1){
             return res.status(404).json({message: 'Not found'})
         }
-        res.status(204).json(message: 'Delete succesful')
+        res.status(204).json({message: 'Delete succesful'})
     }catch(err){
         return res.status(500).json({message: 'Database Error' + err.message})
     }

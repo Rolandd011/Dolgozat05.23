@@ -2,7 +2,7 @@ import Database from "better-sqlite3";
 
 const db = new Database('data/database.sqlite')
 
-db.prepare('CREATE TABLE IF NOT EXISTS recipes (id INTEGRER PRIMARY KEY AUTOINCREMENT, title TEXT, content TEXT').run();
+db.prepare('CREATE TABLE IF NOT EXISTS recipes (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, content TEXT').run();
 
 export const getRecipes = () => db.prepare("SELECT * FROM recipes").all();
 
